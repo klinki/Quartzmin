@@ -13,13 +13,13 @@ export class AsyncDataWrapperComponent<T, E> implements OnInit, AfterContentInit
   @Input()
   data: AsyncData<T, E>;
 
-  @ContentChild(AsyncDataErrorDirective, {static: false, read: TemplateRef})
+  @ContentChild(AsyncDataErrorDirective, { read: TemplateRef })
   errorComponent: TemplateRef<AsyncDataErrorDirective>;
 
-  @ContentChild(AsyncDataLoadingDirective, {static: false, read: TemplateRef})
+  @ContentChild(AsyncDataLoadingDirective, { read: TemplateRef })
   loadingComponent: TemplateRef<AsyncDataLoadingDirective>;
 
-  @ContentChild(AsyncDataSuccessDirective, {static: false, read: TemplateRef})
+  @ContentChild(AsyncDataSuccessDirective, { read: TemplateRef })
   successComponent: TemplateRef<AsyncDataSuccessDirective<T, E>>;
 
   constructor() { }
